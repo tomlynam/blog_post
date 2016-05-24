@@ -1,0 +1,8 @@
+<h1>Entries</h1>
+<p><%= link_to 'New Post', new_entry_path %></p>
+<% @entries.each do |entry| %>
+	<h2><%= entry.title %></h2>
+	<p><%= entry.body %></p>
+	<%= link_to 'Show Entry', entry_path(entry) %>
+<% end %>
+
